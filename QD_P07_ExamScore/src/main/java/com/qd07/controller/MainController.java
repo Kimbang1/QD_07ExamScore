@@ -29,15 +29,14 @@ public class MainController {
 	
 	@GetMapping("/list")
 	public String list() {
-		return"list";
+		return"/Score/list";
 	}
 	
 	@PostMapping("/list")
 	public String saveExamInfo(@RequestBody Examdto examdto){
-		
 		System.out.println(examdto.toString());
 		//데이터 저장 로직 구현
 		examService.save(examdto);
-		return"redirect:/list";
+		return"redirect:/Score/list";
 	}
 }

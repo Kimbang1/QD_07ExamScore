@@ -50,7 +50,7 @@
 			
 			<div id="btnArea" class="dFlex">
 				<button id="saveBTN" type="button">저장</button>
-				<button class="listBTN" type="button">목록</button>
+				<button id="kus" class="listBTN" type="button">목록</button>
 			</div>
 			</form>
 	</div>
