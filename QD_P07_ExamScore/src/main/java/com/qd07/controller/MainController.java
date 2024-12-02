@@ -29,7 +29,7 @@ public class MainController {
 	
 	@GetMapping("/list")
 	public String list() {
-		return"/Score/list";
+		return"/Score/list";	//경로위치
 	}
 	
 	@PostMapping("/list")
