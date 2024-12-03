@@ -27,16 +27,19 @@
 			</div>
 		</div>
 		
-		<c:forEach var="post" items="${postList.content}">
-			<div class="listColumn listRow dFlex">
+		<c:forEach var="post" items="${postList}">
+		<p>${post.examName}</p>
+			<div class="listColumn listRow dFlex refactor" data-examName=${post.examName != null ? post.examName : '이름 없음'}>
+																<!-- 데이터 링크로 값을 가져오게되면
+																		-기호 뒤에 소문자로 가져오게됨. -->
 				<span class="num">${post.num}</span>
-				<span class="Examnumber">${post.Examnumber}</span>
-				<span class="ExamName">${post.ExamName}</span>
-				<span class="Korean">${post.Korean}</span>
-				<span class="Khistory">${post.Khistory}</span>
-				<span class="PhoneNumber">${post.PhoneNumber}</span>
+				<span class="Examnumber">${post.examNumber}</span> 
+				<span class="ExamName">${post.examName}</span>
+				<span class="Korean">${post.korean}</span>
+				<span class="Khistory">${post.khistory}</span>
+				<span class="PhoneNumber">${post.phoneNumber}</span>
 				<span class="RegTM">
-					<fmt:formatDate value="${post.RegTM}" type="date" />
+					<fmt:formatDate value="${post.regTM}" type="date" />
 				</span>
 				<span class="delete">
 					<a href="/delete?num=${post.num}" class="deleteBtn"> X </a>

@@ -12,7 +12,7 @@
 	<div id="wrap">
 		
 		<%@ include file="./layout/header1.jsp" %>
-		<form action="list.jsp" method="post">
+		<form action="/put" method="post">
 			<div id="inputArea">	<!-- 수험결과 입력 영역 -->
 			
 				<span>수험 번호

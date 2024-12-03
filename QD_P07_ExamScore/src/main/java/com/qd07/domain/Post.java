@@ -20,30 +20,29 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="Slist")
+@Table(name = "Slist")
 public class Post {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int num;
-	
+
+	@Column(name = "examNumber", nullable = false)
+	private String examNumber;
+
+	@Column(name = "examName", nullable = false)
+	private String examName;
+
 	@Column(nullable = false)
-	private String Examnumber;
-	
+	private String korean;
+
 	@Column(nullable = false)
-	private String ExamName;
-	
-	@Column(nullable = false)
-	private String Korean;
-	
-	@Column(nullable = false)
-	private String Khistory;
-	
-	@Column(nullable = false)
-	private String PhoneNunber;
-	
+	private String khistory;
+
+	@Column(name = "phoneNumber", nullable = false)
+	private String phoneNumber;
+
 	@CreationTimestamp
 	private Timestamp regTM;
-		
-	
+
 }
